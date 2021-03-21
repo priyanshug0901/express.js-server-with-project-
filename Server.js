@@ -1,6 +1,12 @@
 const express = require ('express');
-const app = express();
+const app = express(); //contain all methods
 
-app.get('/',(req,res)=>{
-    
+const PORT=process.env.PORT || 3000;
+
+app.get('/',(req,res) => {
+    res.send("hello from express...Priyanshu");
 });
+
+app.listen(PORT,() => console.log(`listening on port ${PORT}`)
+); //to create server
+
